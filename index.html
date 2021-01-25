@@ -10,20 +10,29 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <nav>
-      <img src="images/logo.svg" />
-      <li>Home</li>
-      <li>Shop</li>
-      <li>About</li>
-      <li>About</li>
+    <nav class="container">
+      <header class="header">
+        <i class="fas fa-bars mobile-nav" id="mobile-nav"></i>
+        <img class="header__logo" src="/images/logo.svg" alt="" />
+        <div class="header__nav-container">
+          <ul class="header__nav-links">
+            <li class="header__nav-item">Home</li>
+            <li class="header__nav-item">Shop</li>
+            <li class="header__nav-item">About</li>
+            <li class="header__nav-item">Contact</li>
+          </ul>
+        </div>
+      </header>
     </nav>
-    <div>
-      <img src="/images/desktop-image-hero-1.jpg" />
-    </div>
+    <div><img src="/images/desktop-image-hero-1.jpg" alt="" /></div>
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
     <div class="slide">
@@ -58,7 +67,7 @@
       <button>Shop now</button>
     </div>
     <div>
-      <img src="/images/desktop-image-hero-2.jpg" />
+      <img src="/images/desktop-image-hero-2.jpg" alt="" />
     </div>
     <div>
       <h2>About our furniture</h2>
@@ -72,7 +81,7 @@
       </p>
     </div>
     <div>
-      <img src="/images/desktop-image-hero-3.jpg" />
+      <img src="/images/desktop-image-hero-3.jpg" alt="" />
     </div>
 
     <div class="attribution">

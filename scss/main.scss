@@ -27,6 +27,179 @@ body {
   display: none;
 }
 
+.header {
+  // padding: 3rem 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(tab-port) {
+    width: 100%;
+    margin: auto;
+    padding: 6rem 0 12rem;
+  }
+
+  &__logo {
+    width: 13rem;
+
+    @include respond(tab-port) {
+      margin-right: 4rem;
+      width: 17rem;
+    }
+  }
+
+  &__button-container {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    font-size: 1.9rem;
+    display: none;
+
+    @include respond(tab-port) {
+      display: flex;
+      margin-right: auto;
+    }
+
+    &__menu-item {
+      @include respond(tab-port) {
+        align-self: stretch;
+      }
+
+      list-style: none;
+      padding-bottom: 3rem;
+      padding-top: 3rem;
+      border: 3px solid transparent;
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        color: grey;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+      @include respond(tab-land) {
+        &:not(:last-child) {
+          margin-right: 6rem;
+        }
+      }
+    }
+  }
+  &__nav-container {
+    display: none;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.5)
+    );
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      position: unset;
+      height: unset;
+    }
+  }
+
+  &__nav-links {
+    display: flex;
+    // flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-color: #fff;
+    position: absolute;
+    // top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 1.2rem;
+    // border-radius: 5px;
+
+    @include respond(tab-port) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: transparent;
+      position: unset;
+      width: 100%;
+      top: unset;
+      left: unset;
+      transform: translateX(0%);
+      padding: 0;
+    }
+  }
+
+  &__nav-item {
+    padding: 0.8rem 0;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      color: grey;
+    }
+
+    @include respond(tab-port) {
+      margin-right: 2.5rem;
+      transition: all 0.3s;
+      padding: 0;
+    }
+  }
+}
+
+// Navigation for mobile
+.mobile-nav {
+  font-size: 3rem;
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.nav-container {
+  display: none;
+}
+
+.show-mobile-nav {
+  display: block;
+}
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.elevate-element {
+  z-index: 999;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
