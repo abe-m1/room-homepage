@@ -15,6 +15,7 @@ function plusDivs(n) {
 function showDivs(n) {
   let i;
   const slides = document.getElementsByClassName('slide');
+  const imageSlides = document.getElementsByClassName('image-slide');
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -23,8 +24,10 @@ function showDivs(n) {
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
+    imageSlides[i].style.display = 'none';
   }
   slides[slideIndex - 1].style.display = 'block';
+  imageSlides[slideIndex - 1].style.display = 'block';
 }
 
 hamburgerToggle.addEventListener('click', () => {

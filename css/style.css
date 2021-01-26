@@ -113,8 +113,10 @@ body {
   position: absolute;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  padding-top: 4rem; }
   @media (min-width: 900px) {
     .header {
       width: 100%;
@@ -222,6 +224,9 @@ body {
     .mobile-nav {
       display: none; } }
 
+.fa-bars:before {
+  color: white; }
+
 .nav-container {
   display: none; }
 
@@ -234,6 +239,49 @@ body {
 
 .elevate-element {
   z-index: 999; }
+
+.hero-section {
+  position: relative; }
+
+.prev,
+.next {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem;
+  outline: none; }
+
+.slide,
+.bottom-content {
+  width: 80%;
+  margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+  .slide h2,
+  .bottom-content h2 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem; }
+  .slide p,
+  .bottom-content p {
+    margin-bottom: 2rem; }
+  .slide button,
+  .bottom-content button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.2rem; }
+
+.arrow {
+  display: inline-block; }
+
+.arrow-container {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 0px;
+  bottom: 0px; }
 
 .attribution {
   font-size: 11px;

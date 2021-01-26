@@ -32,9 +32,62 @@
         </div>
       </header>
     </nav>
-    <div><img src="/images/desktop-image-hero-1.jpg" alt="" /></div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <div class="hero-section">
+      <picture class="image-slide">
+        <source
+          media="(min-width:375px)"
+          srcset="/images/desktop-image-hero-1.jpg"
+        />
+        <!-- <source
+          media="(min-width:375px)"
+          srcset="/images/mobile-image-hero-1.jpg"
+        /> -->
+        <img
+          src="images/mobile-image-hero-1.jpg"
+          alt="Flowers"
+          style="width: auto"
+        />
+      </picture>
+
+      <!-- <img class="image-slide" src="/images/mobile-image-hero-1.jpg" alt="" /> -->
+      <picture class="image-slide">
+        <source
+          media="(min-width:375px)"
+          srcset="/images/desktop-image-hero-2.jpg"
+        />
+        <!-- <source
+          media="(min-width:375px)"
+          srcset="/images/mobile-image-hero-1.jpg"
+        /> -->
+        <img
+          src="images/mobile-image-hero-2.jpg"
+          alt="Flowers"
+          style="width: auto"
+        />
+      </picture>
+      <!-- <img class="image-slide" src="/images/mobile-image-hero-2.jpg" alt="" /> -->
+      <picture class="image-slide">
+        <source
+          media="(min-width:375px)"
+          srcset="/images/desktop-image-hero-3.jpg"
+        />
+        <!-- <source
+          media="(min-width:375px)"
+          srcset="/images/mobile-image-hero-1.jpg"
+        /> -->
+        <img
+          src="images/mobile-image-hero-3.jpg"
+          alt="Flowers"
+          style="width: auto"
+        />
+      </picture>
+      <!-- <img class="image-slide" src="/images/mobile-image-hero-3.jpg" alt="" /> -->
+      <div class="arrow-container">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div>
+
     <div class="slide">
       <h2>Discover innovative ways to decorate</h2>
       <p>
@@ -43,7 +96,9 @@
         your vision to life. Create a room in your own style with our collection
         and make your property a reflection of you and what you love.
       </p>
-      <button>Shop now</button>
+      <button>
+        Shop now <img class="arrow" src="/images/icon-arrow.svg" alt="" />
+      </button>
     </div>
     <div class="slide">
       <h2>We are available all across the globe</h2>
@@ -53,7 +108,9 @@
         throughout the country. Find the branch nearest you using our store
         locator. Any questions? Don't hesitate to contact us today.
       </p>
-      <button>Shop now</button>
+      <button>
+        Shop now <img class="arrow" src="/images/icon-arrow.svg" alt="" />
+      </button>
     </div>
     <div class="slide">
       <h2>Manufactured with the best materials</h2>
@@ -64,12 +121,14 @@
         experience in this industry, we understand what customers want for their
         home and office.
       </p>
-      <button>Shop now</button>
+      <button>
+        Shop now <img class="arrow" src="/images/icon-arrow.svg" alt="" />
+      </button>
     </div>
     <div>
-      <img src="/images/desktop-image-hero-2.jpg" alt="" />
+      <img src="/images/image-about-dark.jpg" alt="" />
     </div>
-    <div>
+    <div class="bottom-content">
       <h2>About our furniture</h2>
       <p>
         Our multifunctional collection blends design and function to suit your
@@ -81,7 +140,7 @@
       </p>
     </div>
     <div>
-      <img src="/images/desktop-image-hero-3.jpg" alt="" />
+      <img src="/images/image-about-light.jpg" alt="" />
     </div>
 
     <div class="attribution">

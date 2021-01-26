@@ -32,8 +32,10 @@ body {
   position: absolute;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  z-index: 1;
+  padding-top: 4rem;
 
   @include respond(tab-port) {
     width: 100%;
@@ -183,6 +185,10 @@ body {
   }
 }
 
+.fa-bars:before {
+  color: white;
+}
+
 .nav-container {
   display: none;
 }
@@ -198,6 +204,58 @@ body {
 
 .elevate-element {
   z-index: 999;
+}
+
+//end of nav
+.hero-section {
+  position: relative;
+}
+
+.prev,
+.next {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem;
+  outline: none;
+}
+
+.slide,
+.bottom-content {
+  width: 80%;
+  margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.2rem;
+  }
+}
+
+.arrow {
+  display: inline-block;
+}
+
+.arrow-container {
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
 .attribution {
