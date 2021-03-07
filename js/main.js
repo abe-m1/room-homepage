@@ -1,6 +1,8 @@
 const body = document.querySelector('body');
 const mobileNav = document.querySelector('.header__nav-container');
 const hamburgerToggle = document.getElementById('mobile-nav');
+const headerNav = document.querySelector('.nav1');
+const topHeader = document.querySelector('.header1');
 
 let slideIndex = 1;
 document.querySelector('.prev').addEventListener('click', () => plusDivs(-1));
@@ -30,15 +32,30 @@ function showDivs(n) {
   imageSlides[slideIndex - 1].style.display = 'block';
 }
 
-hamburgerToggle.addEventListener('click', () => {
+hamburgerToggle.addEventListener('click', (e) => {
   console.log('click');
-  if (hamburgerToggle.className === 'fas fa-bars mobile-nav') {
-    hamburgerToggle.className = 'fas fa-times mobile-nav elevate-element';
-    mobileNav.classList.add('show-mobile-nav');
+  console.log(hamburgerToggle.className);
+  console.log(e.target.className);
+  if (e.target.classList.contains('btn-close1')) {
+    console.log('here');
+    // hamburgerToggle.className = 'fas fa-times mobile-nav elevate-element open';
+    // mobileNav.classList.add('show-mobile-nav');
+    document.querySelector('.btn-close1').classList.remove('show');
+    document.querySelector('.btn-close1').classList.add('hide');
+
+    document.querySelector('.btn-open1').classList.remove('hide');
+    document.querySelector('.btn-open1').classList.add('show');
+    headerNav.classList.remove('opened');
+    topHeader.classList.add('open');
     body.classList.add('no-scroll');
   } else {
-    hamburgerToggle.className = 'fas fa-bars mobile-nav';
-    mobileNav.classList.remove('show-mobile-nav');
+    topHeader.classList.remove('open');
+    document.querySelector('.btn-close1').classList.add('show');
+    document.querySelector('.btn-close1').classList.remove('hide');
+    document.querySelector('.btn-open1').classList.add('hide');
+    // headerNav.classList.add('opened');
+    // hamburgerToggle.className = 'fas fa-bars mobile-nav';
+    // mobileNav.classList.remove('show-mobile-nav');
     body.classList.remove('no-scroll');
   }
 });

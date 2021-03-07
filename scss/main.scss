@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
 @import 'reset';
 @import 'variables';
+// @import 'nav';
 
 html {
   font-size: 62.5%; //1rem = 10px
@@ -26,6 +27,12 @@ body {
 .slide {
   display: none;
 }
+
+// .slide h2 {
+//   @include respond(tab-port) {
+//     font-size: 3.7rem;
+//   }
+// }
 
 .header {
   // padding: 3rem 0;
@@ -211,14 +218,14 @@ body {
 .hero-section {
   position: relative;
   @include respond(tab-port) {
-    grid-column: 1/4;
+    grid-column: 1/5;
     grid-row: 1/2;
   }
 }
 
 .sliding-text {
   @include respond(tab-port) {
-    grid-column: 4/7;
+    grid-column: 5/7;
     grid-row: 1/2;
   }
 }
@@ -294,7 +301,7 @@ body {
   right: 0px;
   bottom: 0px;
   @include respond(tab-port) {
-    right: -50px;
+    padding: 2rem 3.9rem;
   }
 }
 
@@ -315,4 +322,99 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+///test header
+.header1 {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+}
+
+.nav1__logo {
+  display: none;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.nav1 {
+  min-height: 120px;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  // background-color: #fff;
+  padding: 0 5%;
+  background-color: white;
+}
+
+//
+.open .nav1 {
+  background-color: transparent;
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__ul {
+    display: none;
+  }
+}
+
+///
+.opened {
+  background-color: white !important;
+}
+
+.btn-open1 {
+  background: url(../images/icon-hamburger.svg) no-repeat center center;
+  border: none;
+  // width: 1rem;
+  // width: 40%;
+  width: 25px;
+  height: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-close1 {
+  background: url(../images/icon-close.svg) no-repeat center center;
+  border: none;
+  // width: 1rem;
+  // width: 40%;
+  width: 25px;
+  height: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.nav1__ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-left: 7rem;
+  &__li {
+    position: relative;
+    color: #000;
+    font-weight: 700;
+    text-transform: lowercase;
+    margin-left: 12.5%;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
 }
