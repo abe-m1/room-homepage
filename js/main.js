@@ -47,7 +47,7 @@ hamburgerToggle.addEventListener('click', (e) => {
     document.querySelector('.btn-open1').classList.add('show');
     headerNav.classList.remove('opened');
     topHeader.classList.add('open');
-    body.classList.add('no-scroll');
+    body.classList.remove('no-scroll');
   } else {
     topHeader.classList.remove('open');
     document.querySelector('.btn-close1').classList.add('show');
@@ -56,6 +56,7 @@ hamburgerToggle.addEventListener('click', (e) => {
     // headerNav.classList.add('opened');
     // hamburgerToggle.className = 'fas fa-bars mobile-nav';
     // mobileNav.classList.remove('show-mobile-nav');
-    body.classList.remove('no-scroll');
+
+    body.classList.add('no-scroll');
   }
 });
