@@ -1,8 +1,8 @@
 const body = document.querySelector('body');
 const mobileNav = document.querySelector('.header__nav-container');
 const hamburgerToggle = document.getElementById('mobile-nav');
-const headerNav = document.querySelector('.nav1');
-const topHeader = document.querySelector('.header1');
+const headerNav = document.querySelector('.nav');
+const topHeader = document.querySelector('.header');
 
 let slideIndex = 1;
 document.querySelector('.prev').addEventListener('click', () => plusDivs(-1));
@@ -36,23 +36,23 @@ hamburgerToggle.addEventListener('click', (e) => {
   console.log('click');
   console.log(hamburgerToggle.className);
   console.log(e.target.className);
-  if (e.target.classList.contains('btn-close1')) {
+  if (e.target.classList.contains('btn-close')) {
     console.log('here');
     // hamburgerToggle.className = 'fas fa-times mobile-nav elevate-element open';
     // mobileNav.classList.add('show-mobile-nav');
-    document.querySelector('.btn-close1').classList.remove('show');
-    document.querySelector('.btn-close1').classList.add('hide');
+    document.querySelector('.btn-close').classList.remove('show');
+    document.querySelector('.btn-close').classList.add('hide');
 
-    document.querySelector('.btn-open1').classList.remove('hide');
-    document.querySelector('.btn-open1').classList.add('show');
-    headerNav.classList.remove('opened');
+    document.querySelector('.btn-open').classList.remove('hide');
+    document.querySelector('.btn-open').classList.add('show');
+    // headerNav.classList.remove('opened');
     topHeader.classList.add('open');
     body.classList.remove('no-scroll');
   } else {
     topHeader.classList.remove('open');
-    document.querySelector('.btn-close1').classList.add('show');
-    document.querySelector('.btn-close1').classList.remove('hide');
-    document.querySelector('.btn-open1').classList.add('hide');
+    document.querySelector('.btn-close').classList.add('show');
+    document.querySelector('.btn-close').classList.remove('hide');
+    document.querySelector('.btn-open').classList.add('hide');
     // headerNav.classList.add('opened');
     // hamburgerToggle.className = 'fas fa-bars mobile-nav';
     // mobileNav.classList.remove('show-mobile-nav');
