@@ -215,6 +215,10 @@ body {
   margin: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+  @media (min-width: 1200px) {
+    padding-top: 2rem;
+  }
   
 
   h2 {
@@ -265,10 +269,16 @@ body {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  @include respond(tab-land) {
+
+  @media (min-width: 1200px) {
+    padding: 1.1rem 1.2rem;
+    right: -141px;  
+  }
+  @media (min-width: 1300px) {
     padding: 2rem 2.3rem;
     right: -161px;
   }
+  
 }
 
 .btn-container {
