@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
 @import 'reset';
 @import 'variables';
-// @import 'nav';
 
 html {
   font-size: 62.5%; //1rem = 10px
@@ -24,8 +23,6 @@ body {
   font-size: 1.2rem;
 }
 
-///@at-root
-///test header
 .header {
   background-color: transparent;
   position: absolute;
@@ -84,7 +81,6 @@ body {
   }
 }
 
-//default state
 .open .nav {
   background-color: transparent;
 
@@ -105,8 +101,6 @@ body {
 .btn-open {
   background: url(../images/icon-hamburger.svg) no-repeat center center;
   border: none;
-  // width: 1rem;
-  // width: 40%;
   width: 25px;
   height: 3rem;
   background-color: transparent;
@@ -117,8 +111,6 @@ body {
 .btn-close {
   background: url(../images/icon-close.svg) no-repeat center center;
   border: none;
-  // width: 1rem;
-  // width: 40%;
   width: 25px;
   height: 3rem;
   background-color: transparent;
@@ -134,8 +126,6 @@ body {
   display: none;
 }
 
-///
-
 .slide {
   display: none;
 }
@@ -149,15 +139,12 @@ body {
 
 .grid {
   @include respond(tab-land) {
-    // max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(5, minmax(min-content, auto));
-    // grid-gap: 2rem;
   }
 }
 
-//top
 .hero-section {
   position: relative;
   @include respond(tab-land) {
@@ -228,16 +215,18 @@ body {
   margin: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  
 
   h2 {
     margin-bottom: 2rem;
     font-size: 2.4rem;
+    line-height: 1.2;
   }
 
   p {
     color: $darkGray;
     margin-bottom: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   button {
@@ -277,8 +266,8 @@ body {
   right: 0px;
   bottom: 0px;
   @include respond(tab-land) {
-    padding: 2rem 1.9rem;
-    right: -153px;
+    padding: 2rem 2.3rem;
+    right: -161px;
   }
 }
 

@@ -262,12 +262,13 @@ body {
   .slide h2,
   .bottom-content h2 {
     margin-bottom: 2rem;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    line-height: 1.2; }
   .slide p,
   .bottom-content p {
     color: #a1a1a1;
     margin-bottom: 3rem;
-    font-size: 1.5rem; }
+    font-size: 1.4rem; }
   .slide button,
   .bottom-content button {
     outline: none;
@@ -299,8 +300,8 @@ body {
   bottom: 0px; }
   @media (min-width: 1200px) {
     .arrow-container {
-      padding: 2rem 1.9rem;
-      right: -153px; } }
+      padding: 2rem 2.3rem;
+      right: -161px; } }
 
 @media (min-width: 1200px) {
   .btn-container {
