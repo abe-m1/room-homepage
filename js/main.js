@@ -33,19 +33,13 @@ function showDivs(n) {
 }
 
 hamburgerToggle.addEventListener('click', (e) => {
-  console.log('click');
-  console.log(hamburgerToggle.className);
-  console.log(e.target.className);
   if (e.target.classList.contains('btn-close')) {
-    console.log('here');
-    // hamburgerToggle.className = 'fas fa-times mobile-nav elevate-element open';
-    // mobileNav.classList.add('show-mobile-nav');
     document.querySelector('.btn-close').classList.remove('show');
     document.querySelector('.btn-close').classList.add('hide');
 
     document.querySelector('.btn-open').classList.remove('hide');
     document.querySelector('.btn-open').classList.add('show');
-    // headerNav.classList.remove('opened');
+
     topHeader.classList.add('open');
     body.classList.remove('no-scroll');
   } else {
@@ -53,9 +47,6 @@ hamburgerToggle.addEventListener('click', (e) => {
     document.querySelector('.btn-close').classList.add('show');
     document.querySelector('.btn-close').classList.remove('hide');
     document.querySelector('.btn-open').classList.add('hide');
-    // headerNav.classList.add('opened');
-    // hamburgerToggle.className = 'fas fa-bars mobile-nav';
-    // mobileNav.classList.remove('show-mobile-nav');
 
     body.classList.add('no-scroll');
   }
